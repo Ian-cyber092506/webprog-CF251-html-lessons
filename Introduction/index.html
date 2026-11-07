@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julian">
+    <meta name="description" content="Julian's personal profile webpage">
+    <meta name="keywords" content="HTML, CSS, profile, APC, Information Technology">
     <title>Julian's Personal Profile</title>
     <link rel="stylesheet" href="css/mystyle.css">
 </head>
 <body>
 
-    <header>
+    <header id="top">
         <h1>Julian's Personal Profile</h1>
+        <p>
+            <a href="#education">Education</a> |
+            <a href="#experience">IT Experience</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#gallery">Gallery</a>
+        </p>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>Hello! I'm Julian, a passionate learner and technology enthusiast who loves exploring new concepts, building projects, and continuously improving my skills.</p>
+        <p>Hello! I'm <b>Julian</b>, a <i>passionate learner</i> and <mark>technology enthusiast</mark> who loves exploring new concepts, building projects, and continuously improving my skills.</p>
+        <p style="color: #2c3e50;">Email me at <u>your-email@example.com</u> <small>(replace with your own)</small></p>
     </section>
 
-    <section>
+    <section id="education">
         <h2>Education / Achievements</h2>
         <ul>
             <li><strong>School:</strong> Asia Pacific College (APC), School of Computing and Information Technology</li>
@@ -31,30 +41,66 @@
         <p>Information Technology</p>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>IT Experience</h2>
-        <ul>
+        <ol>
             <li>Web Development Fundamentals (HTML, CSS, JavaScript)</li>
             <li>Basic Database Management &amp; SQL</li>
             <li>Version Control with Git &amp; GitHub</li>
+        </ol>
+        <p>Useful resources:</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
         </ul>
+    </section>
+
+    <section id="schedule">
+        <h2>My Schedule</h2>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Subject</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>WEBPROG</td>
+                <td>Add your time</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Add subject</td>
+                <td>Add your time</td>
+            </tr>
+            <tr>
+                <td colspan="3">Add more rows for your other classes</td>
+            </tr>
+        </table>
     </section>
 
     <section>
         <h2>Hobbies &amp; Interests</h2>
-        <p>Coding, reading tech blogs, digital photography, hiking, and playing strategy games.</p>
+        <div class="hobby-box">
+            <p>Coding, reading tech blogs, digital photography, hiking, and playing strategy games.</p>
+        </div>
+        <dl>
+            <dt>Favorite hobby</dt>
+            <dd>Add your favorite hobby here</dd>
+        </dl>
     </section>
 
     <section>
         <h2>Goals In Life / Dream</h2>
-        <p>To become a skilled Software Engineer, build impactful applications that solve real-world problems, and continuously grow both personally and professionally.</p>
+        <p>To become a skilled <span class="highlight">Software Engineer</span>, build impactful applications that solve real-world problems, and continuously grow both personally and professionally.</p>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <h2>Picture Gallery</h2>
         <p>
-            <img src="profile.jpg" alt="Julian sitting on a stool outdoors, wearing a dark half-zip sweater and light gray jeans">
+            <img src="profile.jpg" alt="Julian sitting on a stool outdoors, wearing a dark half-zip sweater and light gray jeans" width="300">
         </p>
+        <p><a href="#top">Back to top</a></p>
     </section>
 
 </body>
