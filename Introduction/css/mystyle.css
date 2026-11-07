@@ -28,14 +28,49 @@ h2 {
     padding-bottom: 5px;
 }
 
-ul {
+ul,
+ol {
     padding-left: 20px;
 }
 
+a {
+    color: #2563eb;
+}
+
+/* Gallery */
 .gallery img {
     width: 100%;
     max-width: 400px;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #dbeafe;
+}
+
+/* Class examples */
+.hobby-box {
+    background-color: #f3f4f6;
+    padding: 10px;
+    border-left: 4px solid #34495e;
+}
+
+.highlight {
+    color: #2563eb;
+    font-weight: bold;
 }
