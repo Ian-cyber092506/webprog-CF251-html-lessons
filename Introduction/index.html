@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/flexbox.css?version=0.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julian's Personal Profile</title>
+    <link rel="stylesheet" href="css/flexbox.css?version=0.1">
 </head>
 <body>
 
@@ -12,70 +12,54 @@
         <h1>Julian's Personal Profile</h1>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I'm Julian, a passionate learner and technology enthusiast who loves exploring new concepts, building projects, and continuously improving my skills.</p>
-    </section>
+    <main>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Julian, a passionate learner and technology enthusiast who loves exploring new concepts, building projects, and continuously improving my skills.</p>
+        </section>
 
-    <section>
-        <h2>Education / Achievements</h2>
-        <ul>
-            <li><strong>School:</strong> Asia Pacific College (APC), School of Computing and Information Technology</li>
-            <li><strong>Year Level:</strong> Second-year student</li>
-            <li><strong>Achievements:</strong> Graduated Senior High School (2025)</li>
-        </ul>
-    </section>
+        <div class="cards">
+            <section>
+                <h2>Education / Achievements</h2>
+                <ul>
+                    <li><strong>School:</strong> Asia Pacific College (APC), School of Computing and Information Technology</li>
+                    <li><strong>Year Level:</strong> Second-year student</li>
+                    <li><strong>Achievements:</strong> Graduated Senior High School (2025)</li>
+                </ul>
+            </section>
 
-    <section>
-        <h2>Course</h2>
-        <p>BSCS Computer Science Specialized in Cybersecurity</p>
-    </section>
+            <section>
+                <h2>Course</h2>
+                <p>BSCS Computer Science Specialized in Cybersecurity</p>
+            </section>
 
-    <section>
-        <h2>CS Experience</h2>
-        <ul>
-            <li>Web Development Fundamentals (HTML, CSS, JavaScript)</li>
-            <li>Basic Database Management & SQL</li>
-            <li>Version Control with Git & GitHub</li>
-        </ul>
-    </section>
+            <section>
+                <h2>CS Experience</h2>
+                <ul>
+                    <li>Web Development Fundamentals (HTML, CSS, JavaScript)</li>
+                    <li>Basic Database Management &amp; SQL</li>
+                    <li>Version Control with Git &amp; GitHub</li>
+                </ul>
+            </section>
 
-    <section>
-        <h2>Hobbies & Interests</h2>
-        <p>Coding, reading tech blogs, digital photography, hiking, and playing strategy games.</p>
-    </section>
+            <section>
+                <h2>Hobbies &amp; Interests</h2>
+                <p>Coding, reading tech blogs, digital photography, hiking, and playing strategy games.</p>
+            </section>
 
-    <section>
-        <h2>Goals In Life / Dream</h2>
-        <p>To become a skilled Software Engineer, build impactful applications that solve real-world problems, and continuously grow both personally and professionally.</p>
-    </section>
+            <section>
+                <h2>Goals In Life / Dream</h2>
+                <p>To become a skilled Software Engineer, build impactful applications that solve real-world problems, and continuously grow both personally and professionally.</p>
+            </section>
+        </div>
 
-    <section class="gallery">
-        <h2>Picture Gallery</h2>
-        <p>
-            <img src="profile.jpg" alt="Julian sitting on a stool outdoors, wearing a dark half-zip sweater and light gray jeans">
-        </p>
-    </section>
-
-
-<h1>flex-wrap: wrap</h1>
-
-<p>flex-wrap: wrap; specifies that the flex items will wrap if necessary:</p>
-
-<div class="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>  
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>  
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>  
-</div>
-
-<p>Try resizing the browser window!</p>
-
+        <section class="gallery">
+            <h2>Picture Gallery</h2>
+            <div class="gallery-images">
+                <img src="profile.jpg" alt="Julian sitting on a stool outdoors, wearing a dark half-zip sweater and light gray jeans">
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
