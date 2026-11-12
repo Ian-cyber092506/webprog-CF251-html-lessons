@@ -1,14 +1,51 @@
-.container {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;               /* page as a vertical flex layout */
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;               /* centers the title */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f3a5f;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Cards sit side by side and wrap on small screens */
+.cards {
   display: flex;
   flex-wrap: wrap;
-  background-color: DodgerBlue;
+  gap: 20px;
 }
- 
-.container div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;  
-  font-size: 30px;
+
+.cards section {
+  flex: 1 1 280px;             /* grow, shrink, min width 280px */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* Gallery */
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery-images img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 8px;
 }
