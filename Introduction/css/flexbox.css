@@ -1,7 +1,7 @@
 .container2 {
     display: flex;
     flex-wrap: wrap;
-    background-color: dodgerblue;
+    background-color: red;
 }
 
 .container2 div {
