@@ -1,14 +1,170 @@
-.container2 {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: dodgerblue;
+/* ================================================
+   FLEXBOX: header + navigation
+   ================================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 28px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #0e7490, #4338ca);
+  box-shadow: 0 8px 30px rgba(67, 56, 202, 0.3);
 }
 
-.container2 div {
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
-    padding: 10px;
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ================================================
+   FLEXBOX: gallery card (photo stretches to fill)
+   ================================================ */
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery img {
+  flex: 1;
+  min-height: 260px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--card-border);
+}
+
+/* ================================================
+   FLEXBOX: education rows (label + value)
+   ================================================ */
+.info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent-2);
+}
+
+.info-list strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+/* ================================================
+   FLEXBOX: experience cards (wrap into a row)
+   ================================================ */
+.skill-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skill-cards li {
+  flex: 1 1 200px;
+  padding: 16px;
+  border-radius: 10px;
+  background: rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+}
+
+/* ================================================
+   FLEXBOX: hobby chips
+   ================================================ */
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips li {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+}
+
+/* ================================================
+   FLEXBOX: footer
+   ================================================ */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 8px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================
+   FLEXBOX: mobile adjustments
+   ================================================ */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
     text-align: center;
-    font-size: 30px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
 }
