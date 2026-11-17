@@ -1,95 +1,135 @@
+/* ---------- Theme ---------- */
+:root {
+  --bg: #0b1120;
+  --card: #131c31;
+  --card-border: #22304d;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+  --accent-2: #818cf8;
+  --radius: 14px;
+}
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
-  color: #222;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ---------- Grid container ---------- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(34, 211, 238, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(129, 140, 248, 0.12), transparent 40%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+/* ================================================
+   CSS GRID: overall page layout
+   ================================================ */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "header     header     header"
-    "about      about      education"
-    "course     experience hobbies"
-    "goals      goals      gallery";
-  gap: 15px;
+    "gallery    about      about"
+    "gallery    education  course"
+    "experience experience hobbies"
+    "goals      goals      goals"
+    "footer     footer     footer";
+  gap: 20px;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 15px;
-  background-color: dodgerblue;
-}
-
-/* ---------- Grid items ---------- */
-.container > * {
-  background-color: #f1f1f1;
-  padding: 15px 20px;
-  border-radius: 6px;
-}
-
-.container h1,
-.container h2 {
-  margin-top: 0;
-}
-
-.container h2 {
-  font-size: 1.2rem;
-  color: #1a5fb4;
-}
-
-.container ul {
-  padding-left: 20px;
-  margin: 0;
+  padding: 24px;
 }
 
 /* ---------- Assign each item to its grid area ---------- */
-.header     { grid-area: header; text-align: center; }
+.header     { grid-area: header; }
+.gallery    { grid-area: gallery; }
 .about      { grid-area: about; }
 .education  { grid-area: education; }
 .course     { grid-area: course; }
 .experience { grid-area: experience; }
 .hobbies    { grid-area: hobbies; }
 .goals      { grid-area: goals; }
-.gallery    { grid-area: gallery; }
+.footer     { grid-area: footer; }
 
-.gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
+/* ---------- Cards ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* ---------- Tablet: 2 columns ---------- */
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.12);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card p {
+  margin: 0;
+  color: var(--text);
+}
+
+/* ---------- Course highlight text ---------- */
+.highlight {
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================================================
+   RESPONSIVE: tablet (2 columns)
+   ================================================ */
 @media (max-width: 900px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "header     header"
-      "about      about"
+      "gallery    about"
       "education  course"
-      "experience hobbies"
-      "goals      goals"
-      "gallery    gallery";
+      "experience experience"
+      "hobbies    goals"
+      "footer     footer";
   }
 }
 
-/* ---------- Mobile: 1 column ---------- */
+/* ================================================
+   RESPONSIVE: mobile (1 column)
+   ================================================ */
 @media (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
+      "gallery"
       "about"
       "education"
       "course"
       "experience"
       "hobbies"
       "goals"
-      "gallery";
+      "footer";
+    padding: 14px;
   }
 }
