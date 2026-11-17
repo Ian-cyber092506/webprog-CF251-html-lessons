@@ -9,66 +9,72 @@
 </head>
 <body>
 
-    <div class="container2">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-    </div>
-
     <div class="container">
 
         <header class="header">
             <h1>Julian's Personal Profile</h1>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#goals">Goals</a>
+            </nav>
         </header>
 
-        <section class="about">
+        <section class="card gallery" id="gallery">
+            <h2>Picture Gallery</h2>
+            <img src="profile.jpg" alt="Julian sitting on a stool outdoors, wearing a dark half-zip sweater and light gray jeans">
+        </section>
+
+        <section class="card about" id="about">
             <h2>About Me</h2>
             <p>Hello! I'm Julian, a passionate learner and technology enthusiast who loves exploring new concepts, building projects, and continuously improving my skills.</p>
         </section>
 
-        <section class="education">
+        <section class="card education" id="education">
             <h2>Education / Achievements</h2>
-            <ul>
-                <li><strong>School:</strong> Asia Pacific College (APC), School of Computing and Information Technology</li>
-                <li><strong>Year Level:</strong> Second-year student</li>
-                <li><strong>Achievements:</strong> Graduated Senior High School (2025)</li>
+            <ul class="info-list">
+                <li><strong>School</strong> <span>Asia Pacific College (APC), School of Computing and Information Technology</span></li>
+                <li><strong>Year Level</strong> <span>Second-year student</span></li>
+                <li><strong>Achievements</strong> <span>Graduated Senior High School (2025)</span></li>
             </ul>
         </section>
 
-        <section class="course">
+        <section class="card course" id="course">
             <h2>Course</h2>
-            <p>BSCS Computer Science Specialized in Cybersecurity</p>
+            <p class="highlight">BSCS Computer Science Specialized in Cybersecurity</p>
         </section>
 
-        <section class="experience">
+        <section class="card experience" id="experience">
             <h2>CS Experience</h2>
-            <ul>
+            <ul class="skill-cards">
                 <li>Web Development Fundamentals (HTML, CSS, JavaScript)</li>
                 <li>Basic Database Management &amp; SQL</li>
                 <li>Version Control with Git &amp; GitHub</li>
             </ul>
         </section>
 
-        <section class="hobbies">
+        <section class="card hobbies" id="hobbies">
             <h2>Hobbies &amp; Interests</h2>
-            <p>Coding, reading tech blogs, digital photography, hiking, and playing strategy games.</p>
+            <ul class="chips">
+                <li>Coding</li>
+                <li>Reading tech blogs</li>
+                <li>Digital photography</li>
+                <li>Hiking</li>
+                <li>Strategy games</li>
+            </ul>
         </section>
 
-        <section class="goals">
+        <section class="card goals" id="goals">
             <h2>Goals In Life / Dream</h2>
             <p>To become a skilled Software Engineer, build impactful applications that solve real-world problems, and continuously grow both personally and professionally.</p>
         </section>
 
-        <section class="gallery">
-            <h2>Picture Gallery</h2>
-            <img src="profile.jpg" alt="Julian sitting on a stool outdoors, wearing a dark half-zip sweater and light gray jeans">
-        </section>
+        <footer class="footer">
+            <p>&copy; 2026 Julian &bull; Built with CSS Grid &amp; Flexbox</p>
+            <a href="#top">Back to top &uarr;</a>
+        </footer>
 
     </div>
 
